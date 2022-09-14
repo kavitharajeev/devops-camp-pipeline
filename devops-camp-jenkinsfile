@@ -27,7 +27,7 @@ pipeline {
         }
         stage('Application docker build') {
             steps {
-                echo "Building application image"
+                echo "Building application imagqe"
                 //TODO("Lab 4 - Artifact Management"): build the docker app image
                withCredentials([usernameColonPassword(credentialsId: 'rparamathmuni-harbor-auth', variable: 'HARBOR-AUTH')]) {
                     script {
