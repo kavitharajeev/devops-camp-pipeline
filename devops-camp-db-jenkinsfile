@@ -49,7 +49,7 @@ pipeline {
                   steps {
                       echo "Deployment stage"
                       //TODO: deploy database
-                      withCredentials([usernameColonPassword(credentialsId: '<YOUR CREDENTIAL ID NAME>', variable: 'HARBOR-AUTH')]) {
+                      withCredentials([usernameColonPassword(credentialsId: 'rparamathmuni-harbor-auth', variable: 'HARBOR-AUTH')]) {
                           script {
                               sh 'docker build -t $DB_IMAGE_NAME-$COMMIT_HASH -f ./db/Dockerfile ./afs-labs-student'
                               docker.withRegistry('https://$HARBOR_REGISTRY', 'rparamathmuni-harbor-auth') {
