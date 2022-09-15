@@ -39,7 +39,7 @@ pipeline {
               stage('Database docker build') {
                   steps {
                       echo "Building database image"
-                      //TODO: build docker image & push to Harbor
+                      //cdcdTODO: build docker image & push to Harbor
                   }
                   post {
                       //TODO: clean local docker images
